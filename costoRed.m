@@ -11,13 +11,7 @@ if (length(varargin) != 0)
   
 endif
 
-%hijo = breakLoops(hijo);
-
-for i = 1:length(hijo)
-  if(hijo(i) == i)
-    hijo(i) = 0;
-  endif
-endfor
+hijo = breakLoops(hijo);
 
 hijo = [0 hijo+1];
 
