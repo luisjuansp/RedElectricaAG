@@ -10,6 +10,10 @@ for i = 1:n
   if (newRoute(i) == 0)
     visited(i) = 2;
   endif
+  if (newRoute(i) == i)
+    newRoute(i) = 0;
+    visited(i) = 2;
+  endif
 endfor
 
 for i = 1:n 
