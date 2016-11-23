@@ -18,7 +18,7 @@ N = length(prod);
 
 p = population('integer', [ones(1, N - 1)], 0.1, 0.9, [N]);
 p = random(p,4);
-p = evaluate(p, @costoRed)
+p = evaluate(p, @costoRed);
 p = tournament(p);
 p = crossover(p);
 p = mutation(p);
@@ -29,8 +29,11 @@ p = mutation(p);
 %display(costo)
 %fprintf('El costo total es: %f\n',sum(costo))
 %
-%hijo = [0 hijo+1];
-%
-%graficaRed(hijo, C, envia);
 
-%graficaRed(hijo, C, zeros(7));
+besthijo = get(p,'best').r;
+
+hijo = [0 breakLoops(besthijo)+1];
+
+hijo;
+
+graficaRed(hijo, C, zeros(7));
