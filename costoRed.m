@@ -11,6 +11,16 @@ if (length(varargin) != 0)
   
 endif
 
+%hijo = breakLoops(hijo);
+
+for i = 1:length(hijo)
+  if(hijo(i) == i)
+    hijo(i) = 0;
+  endif
+endfor
+
+hijo = [0 hijo+1];
+
 %% Conversi�n de padre a matriz de incidencias
 
 A = zeros(N);
@@ -56,6 +66,7 @@ for i=1:N
    end
 end
 % Matriz de distancias
-display(D)
+%display(D)
 
 costo = costoUnitario(envia).*[0;diag(D(2:N,hijo(2:N)))]';
+costo = sum(costo);

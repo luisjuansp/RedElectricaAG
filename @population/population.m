@@ -23,16 +23,16 @@ function pop = population(type,varargin)
 %*   vgGA: The Virtual Gene Genetic Algorithm               *
 %*                                                          *
 %*   Copyright (c) All Rights Reserved                      *
-%*   Manuel Valenzuela-Rendón                               *
+%*   Manuel Valenzuela-Rendï¿½n                               *
 %*   valenzuela@itesm.mx                                    *
 %*   http://homepages.mty.itesm.mx/valenzuela               *
 %*                                                          *
-%*   Tecnológico de Monterrey, Campus Monterrey             *
+%*   Tecnolï¿½gico de Monterrey, Campus Monterrey             *
 %*   Monterrey, N.L., Mexico                                *
 %*                                                          *
 %************************************************************
 
-MAXIMIZATION = 1; % Default of params.max
+MAXIMIZATION = 0; % Default of params.max
 
 NO_FUNCTIONS = 1; % Initial value of params.noFunctions
  
