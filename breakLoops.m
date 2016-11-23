@@ -24,8 +24,9 @@ endfor
 
 if (loop)
 
+  currentNode = 0;
   do 
-    currentNode = ceil(rand() * n);
+    currentNode = currentNode + 1;
   until (visited(currentNode) == 1)
   currentPointer = newRoute(currentNode);
   do
@@ -46,8 +47,9 @@ if (loop)
       if (endLoop)
         break;
       endif
+      currentNode = 0;
       do 
-        currentNode = ceil(rand() * n);
+        currentNode = currentNode + 1;
       until (visited(currentNode) == 1)
       currentPointer = newRoute(currentNode);
     elseif (visited(currentPointer) == 1)
@@ -70,8 +72,9 @@ if (loop)
       if (endLoop)
         break;
       endif
+      currentNode = 0;
       do 
-        currentNode = ceil(rand() * n);
+        currentNode = currentNode + 1;
       until (visited(currentNode) == 1)
       currentPointer = newRoute(currentNode);
     endif
