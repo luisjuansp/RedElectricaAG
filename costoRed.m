@@ -11,13 +11,9 @@ if (length(varargin) != 0)
   
 endif
 
-pasthijo = hijo;
-
 hijo = breakLoops(hijo);
 
 hijo = [0 hijo+1];
-
-graficaRed(hijo, C, zeros(7));
 
 %% Conversi�n de padre a matriz de incidencias
 
